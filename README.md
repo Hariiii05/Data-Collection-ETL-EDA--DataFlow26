@@ -1,42 +1,99 @@
 # Data-Collection-ETL-EDA--DataFlow26
-1. Giới thiệu
-Dự án này tập trung vào xây dựng bộ dữ liệu, làm sạch, và phân tích khám phá dữ liệu (Exploratory Data Analysis – EDA) nhằm hiểu rõ cấu trúc dữ liệu, phát hiện các xu hướng, mối quan hệ và vấn đề tiềm ẩn trước khi tiến hành các bước phân tích hoặc mô hình hóa tiếp theo.
-Notebook chính của dự án: Xây dựng bộ dữ liệu + EDA.ipynb.
-2. Mục tiêu
-Thu thập và tổng hợp dữ liệu phục vụ nghiên cứu.
-Làm sạch dữ liệu: xử lý giá trị thiếu, dữ liệu ngoại lai và sai lệch.
-Phân tích thống kê mô tả các biến quan trọng.
-Trực quan hóa dữ liệu để nhận diện xu hướng và mối quan hệ.
-Đưa ra các nhận xét ban đầu làm cơ sở cho phân tích sâu hơn.
-3. Cấu trúc dự án
-├── Xây dựng bộ dữ liệu + EDA.ipynb  # Notebook chính
-├── data/                            # Thư mục chứa dữ liệu thô 
-├── Dashboard.pbi                    # Dashboard báo cáo chính
-└── README.md                        # Tài liệu mô tả dự án
-4. Công cụ và thư viện sử dụng
-Python
-Pandas: xử lý và phân tích dữ liệu
-NumPy: tính toán số học
-Matplotlib / Seaborn: trực quan hóa dữ liệu
-Jupyter Notebook: môi trường thực hiện và trình bày phân tích
-5. Nội dung chính trong Notebook
-5.1. Xây dựng và chuẩn bị dữ liệu
-Nạp dữ liệu từ nguồn ban đầu.
-Chuẩn hóa tên biến và định dạng dữ liệu.
-Kiểm tra và xử lý giá trị thiếu.
-5.2. Phân tích khám phá dữ liệu (EDA)
-Thống kê mô tả (mean, median, min, max, …).
-Phân phối dữ liệu của các biến quan trọng.
-Phân tích mối quan hệ giữa các biến bằng biểu đồ.
-5.3. Nhận xét ban đầu
-Các xu hướng nổi bật trong dữ liệu.
-Những vấn đề tiềm ẩn cần lưu ý khi phân tích sâu hơn.
-6. Cách sử dụng
-Cài đặt các thư viện cần thiết:
-pip install pandas numpy matplotlib seaborn jupyter
-Mở Jupyter Notebook:
-jupyter notebook
-Chạy file Xây dựng bộ dữ liệu + EDA.ipynb theo thứ tự các cell.
-7. Ghi chú
-Kết quả EDA mang tính khám phá và mô tả, chưa phải kết luận cuối cùng.
-Các nhận định rút ra từ biểu đồ và thống kê cần được kiểm chứng thêm ở các bước phân tích tiếp theo.
+# Xây dựng bộ dữ liệu và EDA
+
+Đây là project **xây dựng bộ dữ liệu và phân tích khám phá dữ liệu (EDA)** phục vụ cho bài toán **phân tích hành vi học tập và kết quả học tập của sinh viên**.
+
+Mục tiêu chính của project là **hiểu dữ liệu**, **phát hiện xu hướng – rủi ro**, và **đưa ra các nhận định định hướng** trước khi bước sang giai đoạn feature engineering hoặc xây dựng mô hình machine learning.
+
+Notebook chính của project: `Xây dựng bộ dữ liệu + EDA.ipynb` và `Dashboard.pbix`
+
+---
+
+## Mục tiêu
+- Tổng hợp và chuẩn hóa dữ liệu học tập của sinh viên
+- Phân tích thống kê mô tả các biến quan trọng
+- Trực quan hóa mối quan hệ giữa các yếu tố học tập
+- Đưa ra các nhận xét, giả thuyết ban đầu cho bước modeling
+
+---
+
+## Phạm vi dữ liệu
+Dữ liệu sử dụng trong project bao gồm các nhóm thông tin chính:
+- Thông tin đầu vào (điểm chuẩn, điểm trúng tuyển, phương thức xét tuyển)
+- Thông tin học tập (năm học, học kỳ, số tín chỉ đăng ký)
+- Kết quả học tập (số tín chỉ hoàn thành, CPA, trạng thái pass/fail)
+
+---
+
+## Các bước chính trong EDA
+
+### Bước 0: Tổng quan dữ liệu
+- Kiểm tra kích thước dataset
+- Kiểm tra kiểu dữ liệu các cột
+- Xác định các biến số và biến phân loại
+
+---
+
+### Bước 1: Kiểm tra và xử lý dữ liệu thiếu
+- Thống kê tỷ lệ missing value theo từng biến
+- Phân biệt missing mang tính logic (ví dụ: sinh viên năm 1 chưa có CPA)
+- Ghi nhận các biến cần xử lý ở bước preprocessing sau
+
+---
+
+### Bước 2: Phân tích thống kê mô tả
+- Giá trị trung bình, trung vị, min, max
+- Phân phối số tín chỉ đăng ký và hoàn thành
+- Phân phối CPA và tỷ lệ pass
+
+---
+
+### Bước 3: Phân tích mối quan hệ giữa các biến
+- Mối quan hệ giữa số tín chỉ đăng ký và tỷ lệ hoàn thành
+- Ảnh hưởng của CPA tới kết quả học tập
+- So sánh kết quả học tập theo:
+  - Năm học
+  - Phương thức xét tuyển
+  - Độ lệch điểm đầu vào
+
+---
+
+### Bước 4: Trực quan hóa dữ liệu
+- Histogram phân phối
+- Boxplot phát hiện ngoại lai
+- Line chart thể hiện xu hướng theo học kỳ / số tín chỉ
+
+---
+
+### Bước 5: Nhận xét và kết luận EDA
+- Xác định các ngưỡng rủi ro học tập
+- Nhận diện nhóm sinh viên dễ không hoàn thành tín chỉ
+- Đề xuất các feature tiềm năng cho mô hình ML
+
+---
+
+## Công cụ và thư viện sử dụng
+Yêu cầu Python >= 3.8 và các thư viện sau:
+
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
+---
+
+## Kết quả đạt được
+- Hiểu rõ cấu trúc và chất lượng dữ liệu
+- Phát hiện các xu hướng quan trọng ảnh hưởng tới kết quả học tập
+- Đặt nền tảng vững chắc cho bước **preprocessing & feature engineering**
+
+---
+
+## Ghi chú
+- Kết quả EDA mang tính **khám phá**, không phải kết luận nhân quả
+- Các nhận định cần được kiểm chứng ở bước modeling
+
+---
+
+Sẵn sàng cho giai đoạn **tiền xử lý dữ liệu và huấn luyện mô hình ML**
+
+
