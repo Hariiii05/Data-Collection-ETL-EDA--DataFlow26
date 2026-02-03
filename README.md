@@ -1,6 +1,4 @@
 # Data-Collection-ETL-EDA--DataFlow26
-# Xây dựng bộ dữ liệu và EDA
-
 Đây là project **xây dựng bộ dữ liệu và phân tích khám phá dữ liệu (EDA)** phục vụ cho bài toán **phân tích hành vi học tập và kết quả học tập của sinh viên**.
 
 Mục tiêu chính của project là **hiểu dữ liệu**, **phát hiện xu hướng – rủi ro**, và **đưa ra các nhận định định hướng** trước khi bước sang giai đoạn feature engineering hoặc xây dựng mô hình machine learning.
@@ -59,8 +57,7 @@ Dữ liệu sử dụng trong project bao gồm các nhóm thông tin chính:
 ---
 
 ### Bước 4: Trực quan hóa dữ liệu
-- Histogram phân phối
-- Boxplot phát hiện ngoại lai
+
 - Line chart thể hiện xu hướng theo học kỳ / số tín chỉ
 
 ---
