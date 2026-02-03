@@ -5,15 +5,11 @@ Mục tiêu chính của project là **hiểu dữ liệu**, **phát hiện xu h
 
 Notebook chính của project: `Xây dựng bộ dữ liệu + EDA.ipynb` và `Dashboard.pbix`
 
----
-
 ## Mục tiêu
 - Tổng hợp và chuẩn hóa dữ liệu học tập của sinh viên
 - Phân tích thống kê mô tả các biến quan trọng
 - Trực quan hóa mối quan hệ giữa các yếu tố học tập
 - Đưa ra các nhận xét, giả thuyết ban đầu cho bước modeling
-
----
 
 ## Phạm vi dữ liệu
 Dữ liệu sử dụng trong project bao gồm các nhóm thông tin chính:
@@ -21,53 +17,19 @@ Dữ liệu sử dụng trong project bao gồm các nhóm thông tin chính:
 - Thông tin học tập (năm học, học kỳ, số tín chỉ đăng ký)
 - Kết quả học tập (số tín chỉ hoàn thành, CPA, trạng thái pass/fail)
 
----
-
-## Các bước chính trong EDA
+## Các bước chính trong xây dựng bộ dữ liệu
 
 ### Bước 0: Tổng quan dữ liệu
 - Kiểm tra kích thước dataset
 - Kiểm tra kiểu dữ liệu các cột
 - Xác định các biến số và biến phân loại
 
----
+## Bước 1: Chuẩn hóa học kỳ để sắp xếp thời gian
+## Bước 2: Gộp data để tính lịch sử + xây dựng đặc trưng cho bộ dữ liệu
+## Bước 3: Ghép thông tin tuyển sinh
+## Bước 4: Chia tập dữ liệu
+## Bước 5: Lựa chọn đặc trưng đưa vào mô hình và lưu kết quả
 
-### Bước 1: Kiểm tra và xử lý dữ liệu thiếu
-- Thống kê tỷ lệ missing value theo từng biến
-- Phân biệt missing mang tính logic (ví dụ: sinh viên năm 1 chưa có CPA)
-- Ghi nhận các biến cần xử lý ở bước preprocessing sau
-
----
-
-### Bước 2: Phân tích thống kê mô tả
-- Giá trị trung bình, trung vị, min, max
-- Phân phối số tín chỉ đăng ký và hoàn thành
-- Phân phối CPA và tỷ lệ pass
-
----
-
-### Bước 3: Phân tích mối quan hệ giữa các biến
-- Mối quan hệ giữa số tín chỉ đăng ký và tỷ lệ hoàn thành
-- Ảnh hưởng của CPA tới kết quả học tập
-- So sánh kết quả học tập theo:
-  - Năm học
-  - Phương thức xét tuyển
-  - Độ lệch điểm đầu vào
-
----
-
-### Bước 4: Trực quan hóa dữ liệu
-
-- Line chart thể hiện xu hướng theo học kỳ / số tín chỉ
-
----
-
-### Bước 5: Nhận xét và kết luận EDA
-- Xác định các ngưỡng rủi ro học tập
-- Nhận diện nhóm sinh viên dễ không hoàn thành tín chỉ
-- Đề xuất các feature tiềm năng cho mô hình ML
-
----
 
 ## Công cụ và thư viện sử dụng
 Yêu cầu Python >= 3.8 và các thư viện sau:
